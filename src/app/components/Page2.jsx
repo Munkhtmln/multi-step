@@ -1,7 +1,8 @@
 "use client";
-import Header from "./components/Header";
-import Continue from "./components/Continue";
-import Firstpage from "./components/Firstpage";
+import Header from "./Header";
+import Continue from "./Continue";
+import Secondpage from "./Secondpage";
+import Continue2 from "./Continue2";
 
 export default function Page() {
   return (
@@ -9,9 +10,9 @@ export default function Page() {
       <div className=" w-[480px] h-[655px] bg-[#Ffffff] m-auto ">
         <div className="w-[416px] h-[385px]       ">
           <Header />
-          <Firstpage />
+          <Secondpage />
         </div>
-        <Continue />
+        <Continue2 />
       </div>
     </div>
   );

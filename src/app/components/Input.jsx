@@ -26,7 +26,7 @@ export default function Home({ label, error, placeholder }) {
         id=""
         placeholder={placeholder}
       />
-      <p>{error}</p>
+      <p className="text-red-500 text-sm">{error}</p>
     </div>
   );
 }

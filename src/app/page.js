@@ -2,8 +2,11 @@
 import Header from "./components/Header";
 import Continue from "./components/Continue";
 import Firstpage from "./components/Firstpage";
+import { useState } from "react";
 
 export default function Home() {
+  const [activestage, setActivestage] = useState();
+
   return (
     <div className="bg-[#F4F4F4] h-[100vh] flex">
       <div className=" w-[480px] h-[655px] bg-[#Ffffff] m-auto ">
