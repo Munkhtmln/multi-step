@@ -1,6 +1,13 @@
-export default function Home({ label, error, placeholder }) {
+export default function Home({
+  label,
+  error,
+  placeholder,
+  errorcheck,
+  name,
+  userinfovalue,
+}) {
   return (
-    <div>
+    <div className="flex flex-col gap-2">
       <p className="font-semibold text-sm flex  ">
         {label}{" "}
         <svg
@@ -20,11 +27,13 @@ export default function Home({ label, error, placeholder }) {
         </svg>
       </p>
       <input
+        onChange={errorcheck}
         className="border-2 rounded-lg outline-blue-300 p-[12px] w-[416px] h-[44px]   "
         type="text"
-        name=""
+        name={name}
         id=""
         placeholder={placeholder}
+        value={userinfovalue}
       />
       <p className="text-red-500 text-sm">{error}</p>
     </div>
