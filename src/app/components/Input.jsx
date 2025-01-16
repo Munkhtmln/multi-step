@@ -5,6 +5,7 @@ export default function Home({
   errorcheck,
   name,
   userinfovalue,
+  type,
 }) {
   return (
     <div className="flex flex-col gap-2">
@@ -29,7 +30,7 @@ export default function Home({
       <input
         onChange={errorcheck}
         className="border-2 rounded-lg outline-blue-300 p-[12px] w-[416px] h-[44px]   "
-        type="text"
+        type={type}
         name={name}
         id=""
         placeholder={placeholder}

@@ -2,6 +2,7 @@
 import Header from "./Header";
 import Continue from "./Continue";
 import Input from "./Input";
+import { ChevronLeft } from "lucide-react";
 
 export default function Page({
   pages,
@@ -24,6 +25,13 @@ export default function Page({
       }));
       err = true;
     }
+    // if (!phonenumber.length > 6) {
+    //   setUserInfoError((prev) => ({
+    //     ...prev,
+    //     phonenumber: "Please enter a valid phone number.",
+    //   }));
+    //   err = true;
+    // }
     if (!phonenumber.trim()) {
       setUserInfoError((prev) => ({
         ...prev,
@@ -53,8 +61,11 @@ export default function Page({
   return (
     <div className="bg-[#F4F4F4] h-[100vh] justify-center flex">
       <div className=" w-[480px] h-[655px] justify-center flex flex-col bg-[#Ffffff] m-auto ">
-        <div className="">
-          <Header />
+        <div>
+          {" "}
+          <div className="ml-8">
+            <Header />
+          </div>
           <div className="mt-4 ml-[32px] flex flex-col gap-[12px]  ">
             <Input
               name="email"
@@ -79,6 +90,7 @@ export default function Page({
               placeholder="Your password"
               errorcheck={errorcheck}
               userinfovalue={userinfo.paswword}
+              type="password"
             />
             <Input
               name="confirmpassword"
@@ -87,13 +99,16 @@ export default function Page({
               placeholder="Confirm password"
               errorcheck={errorcheck}
               userinfovalue={userinfo.confirmpassword}
+              type="Password"
             />
           </div>
         </div>
         <div className="flex gap-3 pt-6 w-[100%] px-5">
-          <button className="bg-blue-600 w-[200px] rounded-md" onClick={back}>
-            {" "}
-            Back
+          <button
+            className="border-gray-100 border-2 justify-center items-center w-[128px] h-[100%] rounded-md"
+            onClick={back}
+          >
+            <p className="">Back</p>
           </button>
           <Continue
             activestage={activestage}
