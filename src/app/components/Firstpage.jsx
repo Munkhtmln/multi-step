@@ -32,34 +32,6 @@ export default function ({
       }));
       error = true;
     }
-    // if (!email.trim()) {
-    //   setUserInfoError((prev) => ({
-    //     ...prev,
-    //     email: "Please provide a valid email address.",
-    //   }));
-    //   error = true;
-    // }
-    // if (!phonenumber.trim()) {
-    //   setUserInfoError((prev) => ({
-    //     ...prev,
-    //     phonenumber: "Please enter a valid phone number.",
-    //   }));
-    //   error = true;
-    // }
-    // if (!password.trim()) {
-    //   setUserInfoError((prev) => ({
-    //     ...prev,
-    //     password: "Password must include letters and numbers.",
-    //   }));
-    //   error = true;
-    // }
-    // if (!confirmpassword.trim()) {
-    //   setUserInfoError((prev) => ({
-    //     ...prev,
-    //     confirmpassword: "Passwords do not match. Please try again.",
-    //   }));
-    //   error = true;
-    // }
     if (error == false) {
       pagechanger();
     }

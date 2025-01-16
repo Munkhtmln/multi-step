@@ -2,11 +2,12 @@
 import Firstpage from "./components/Firstpage";
 import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";
+import Page4 from "./components/Page4";
 import { useState } from "react";
 
 export default function Home() {
   const [activestage, setActivestage] = useState(0);
-  const FormStages = [Firstpage, Page2, Page3][activestage];
+  const FormStages = [Firstpage, Page2, Page3, Page4][activestage];
 
   const [userinfo, setUserInfo] = useState({
     firstname: "",

@@ -8,6 +8,7 @@ export default function Page3({ pagechanger, back }) {
     const uploadfile = e.target.files[0];
     setFile(URL.createObjectURL(uploadfile));
   };
+
   return (
     <div className="bg-[#F4F4F4] h-[100vh] justify-center items-center ">
       <div className="w-[480px] h-[655px] bg-[#Ffffff] rounded-lg p-8 m-auto">
@@ -58,7 +59,11 @@ export default function Page3({ pagechanger, back }) {
             >
               Back
             </button>
-            <Continue pagechanger={pagechanger} pages="3/3" />
+            <Continue
+              handleclick={pagechanger}
+              pages="3/3"
+              // handleclick={cont}
+            />
           </div>
         </div>
       </div>
